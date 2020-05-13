@@ -1,0 +1,158 @@
+
+.button {
+	color: $color-2;
+	padding: 12px;
+	font-size: 14px;
+	letter-spacing: 0px;
+	line-height: 22px;
+	text-transform: uppercase;
+	cursor: pointer;
+	border-radius: 5px;
+	display: inline-flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	transition: 0.3s;
+}
+
+.button.disabled {
+	cursor: not-allowed;
+	background-color: $border-grey;
+	border:1px solid $border-grey;
+}
+.button:disabled {
+	cursor: not-allowed;
+	background-color: $border-grey;
+	border:1px solid $border-grey;
+}
+
+.button-primary {
+	background-color: $color-3;
+	color: $color-2;
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+	background-color: #252665;
+	border: 1px solid #252665;
+	color: $color-2;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+	background-color: #efebeb;
+	border: 1px solid #efebeb;
+	color: $color-3;
+}
+
+.btn {
+	padding: 6px 20px 8px;
+	font-size: 18px;
+	line-height: 24px;
+	border-radius: 7px; 
+}
+
+.btn-primary {
+	color: $color-2;
+	background-color: $color-4;
+	border-color: $color-4;
+	&:hover {
+		background-color: $color-13;
+		border-color: $color-13;
+	}
+	&:not(:disabled):not(.disabled):active {
+		background-color: $color-13;
+		border-color: $color-13;
+	}
+}
+
+.btn-secondary {
+	color: $color-2;
+	background-color: $color-3;
+	border-color: $color-3;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 7px 9px;
+	.fa {
+		padding-left: 5px;
+		font-size: 22px !important;
+	}
+	&:hover {
+		background-color: $color-3;
+		border-color: $color-3;
+	}
+}
+
+.custom-button {
+	line-height: 40px;
+	background-color: $color-3;
+	border: 1px solid $color-3;
+	color: $color-1 !important;
+	height: 60px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 18px;
+	letter-spacing: 0.7px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 25px;
+	position: relative;
+	&:hover {
+		background-color: $color-2;
+		border:1px solid $color-2;
+		color: $color-3 !important;
+	}
+	.fa {
+		font-size: 28px;
+	}
+}
+
+
+.custom-btn-fixed-width{
+	width:300px;
+}
+
+.custom-btn-100pc-width{
+	width:100%;
+}
+
+.hover-bg-black{
+	&:hover {
+		background-color: $color-1;
+		border:1px solid $color-1;
+		color: $color-3 !important;
+		&:after {
+			border: 1px solid $color-1;	
+		}
+	}
+	&:hover .arrow-svg path {
+		fill: $color-3;
+	}
+}
+
+
+@media(max-width: 767px){
+	.custom-button {
+		height: 50px;
+		&:after {
+			height: 50px;
+			top:7px;
+		}
+	}
+	.custom-btn-fixed-width {
+		width:230px;
+		&:after {
+			width: 230px;
+			left: 5px;
+			top: 7px;
+		}
+	}
+
+	.btn {
+		padding: 10px 20px;
+		font-size: 17px;
+		line-height: 20px;
+	}
+}
